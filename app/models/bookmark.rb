@@ -4,4 +4,4 @@ class Bookmark < ApplicationRecord
 
   validates :list, uniqueness: { scope: :movie, message: 'already exists' }
   validates :comment, length: { minimum: 6 }
-end
+end 
