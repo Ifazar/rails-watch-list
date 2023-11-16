@@ -1,4 +1,12 @@
-<h1>Lists#index</h1>
-<p>Find me in app/views/lists/index.html.erb</p>
+<h1>Movie Lists</h1>
 
 
+<div >
+    <ul>
+      <% @lists.each do |list| %>
+        <li>
+          <%= link_to list.name, list_path(list) %> - <%= button_to "Delete", root_path(list),method: :delete %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
