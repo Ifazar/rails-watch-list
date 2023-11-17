@@ -1,0 +1,7 @@
+<div>
+  <%= simple_form_for [@list, @bookmark] do |t| %>
+    <%= t.input :movie, collection: Movie.all %>
+    <%= t.input :comment %>
+    <%= t.submit  %>
+  <% end %>
+</div>

@@ -2,11 +2,18 @@
 
 
 <div >
-    <ul>
-      <% @lists.each do |list| %>
-        <li>
-          <%= link_to list.name, list_path(list) %> - <%= button_to "Delete", root_path(list),method: :delete %>
-        </li>
-      <% end %>
-    </ul>
-  </div>
+  <ul>
+    <% @lists.each do |list| %>
+      <li>
+        <%= link_to list.name, list_path(list) %> - <%= button_to "Delete", root_path(list),method: :delete %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+
+<div>
+  <p>
+    <%= link_to "Add new movie list", new_list_path %>
+  </p>
+</div>
